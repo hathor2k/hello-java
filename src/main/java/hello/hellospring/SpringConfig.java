@@ -25,12 +25,13 @@ public class SpringConfig {
         this.memberRepository = memberRepository;
     }
 
+
 //    @Autowired
 //    public SpringConfig(DataSource datasource) {
 //        datasource = datasource;
 //    }
     @Bean
-    public MemberService memberService( ) {
+    public MemberService memberService() {
         return new MemberService(memberRepository);
     }
 
